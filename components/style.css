@@ -1,0 +1,200 @@
+@import '../app/globals.css';
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5em;
+    padding: 1em 3em;
+}
+header nav
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header nav .links
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5em;
+    color: var(--mediumGray);
+}
+.links .features-dropdown, .company-dropdown
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+.dropdown
+{
+    user-select: none;
+}
+.dropdown img
+{
+    margin-left: 0.3em;
+}
+.links a
+{
+    text-decoration: none;
+    color: var(--mediumGray);
+}
+.features-dropdown:hover, .company-dropdown:hover
+{
+    color: var(--almostBlack);
+}
+.links a:hover
+{
+    color: var(--almostBlack);
+}
+.authentication-btn
+{
+    display: flex;
+    gap: 1em;
+}
+.authentication-btn button
+{
+    font-size: 1em;
+    padding: 0.7em 1em;
+    border-radius: 0.8em;
+    border: 1px solid var(--mediumGray);
+    color: var(--mediumGray);
+    background-color: var(--almostWhite);
+    cursor: pointer;
+}
+.authentication-btn #loginBtn
+{
+    border: none;
+    background: none;
+}
+.authentication-btn #loginBtn:hover
+{
+    color: var(--almostBlack);
+}
+.authentication-btn #registerBtn:hover
+{
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+}
+.feature-links
+{
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--white);
+    padding: 1.5em;
+    box-shadow: 0 2px 2px #ccc;
+    border-radius: 0.5em;
+    z-index: 998;
+}
+.feature-links a
+{
+    display: flex;
+    gap: 0.8em;
+}
+.company-links
+{
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--white);
+    padding: 1.5em;
+    box-shadow: 0 2px 2px #ccc;
+    border-radius: 0.5em;
+    z-index: 998;
+}
+.menuIcon
+{
+    display: none;
+}
+.overlay
+{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+@media (max-width: 768px){
+    .menuIcon
+    {
+        display: block;
+        z-index: 1000;
+    }
+    header nav
+    {
+        display: none;
+    }
+    header
+    {
+        justify-content: space-between;
+    }
+    header nav.open
+    {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-color: var(--white);
+        padding: 0 3em;
+        z-index: 999;
+    }
+    header nav.open .links
+    {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .overlay.open {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+    header nav.open .links .features-dropdown
+    {
+        flex-direction: column;
+    }
+    header nav.open .links .features-dropdown .feature-links
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+    header nav.open .links .company-dropdown .company-links
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+    header nav.open .links .company-dropdown
+    {
+        flex-direction: column;
+    }
+    header nav.open .authentication-btn
+    {
+        align-items: start;
+        margin-top: 2em;
+        flex-direction: column;
+    }
+}
+
+
