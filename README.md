@@ -25,13 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](../public/screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Goto](https://your-solution-url.com)
-- Live Site URL: [Visit!](https://your-live-site-url.com)
+- Solution URL: [Goto](https://www.frontendmentor.io/solutions/intro-section-with-page-routing-reactnextjs-AbUCfsN6yC)
+- Live Site URL: [Visit!](https://akibraza91.github.io/snap-app/)
 
 ## My process
 
